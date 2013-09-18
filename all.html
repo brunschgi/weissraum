@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Weissraum – All Messages</title>
+    <link rel="stylesheet" href="css/normalize.css" />
+    <link rel="stylesheet" href="css/app.css" />
+    <meta charset="utf-8" />
+</head>
+<body>
+<ul id="messages">
+
+</ul>
+<script>
+    var messages = document.getElementById('messages');
+    for (var i = localStorage.length - 1; i > -1; i--) {
+        var timestamp = localStorage.key(i);
+        var message = localStorage[timestamp];
+        var date = new Date(parseInt(timestamp, 10));
+
+        console.log(timestamp);
+
+        var item = document.createElement('li');
+        item.innerHTML = message + '<time>' + date.getDate() + '.' + date.getMonth() + '.' + date.getFullYear() + ' ' + date.getHours() + ':' + date.getMinutes() + '</time>';
+
+        messages.appendChild(item);
+    }
+</script>
+</body>
+</html>

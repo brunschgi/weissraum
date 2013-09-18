@@ -1,0 +1,61 @@
+@font-face {
+    font-family: 'BLOKKNeue-Regular';
+    src: url('BLOKKNeue-Regular.eot');
+    src: url('BLOKKNeue-Regular.eot?#iefix') format('embedded-opentype'),
+         url('BLOKKNeue-Regular.woff') format('woff'),
+         url('BLOKKNeue-Regular.svg#BLOKKNeue-Regular') format('svg');
+    font-weight: normal;
+    font-style: normal;
+}
+
+#message {
+    border: none;
+    outline: 0;
+    display: block;
+    font-family: 'BLOKKNeue-Regular';
+    font-size: 40px;
+    color: #333;
+    line-height: 1em;
+    height: 700px;
+    width: 700px;
+    margin: 150px auto;
+}
+
+#result {
+    font-family: "Helvetica Neue", Helvetica, sans-serif;
+    font-size: 40px;
+    color: #333;
+    line-height: 1.2em;
+    height: 700px;
+    width: 700px;
+    margin: 150px auto;
+}
+
+#messages {
+    font-family: "Helvetica Neue", Helvetica, sans-serif;
+    font-size: 18px;
+    line-height: 24px;
+    margin: 0;
+    padding: 0;
+}
+
+#messages time {
+    font-family: "Georgia", serif;
+    font-size: 14px;
+    line-height: 14px;
+    margin-top: 8px;
+    display: block;
+    color: #999;
+}
+
+#messages li {
+    width: 20%;
+    margin: 2.5%;
+    float: left;
+    list-style: none;
+    color: #333;
+}
+
+#messages li:nth-child(4n + 1) {
+    clear: left;
+}

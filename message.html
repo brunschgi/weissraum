@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Weissraum – Create A Message</title>
+    <link rel="stylesheet" href="css/normalize.css" />
+    <link rel="stylesheet" href="css/app.css" />
+    <meta charset="utf-8" />
+</head>
+<body>
+<textarea id="message" maxlength="140"></textarea>
+<script>
+    var message = document.getElementById('message');
+    var target = window.open('result.html', 'result');
+
+    message.addEventListener('keyup', function(e) {
+       if(e.keyCode == 13) {
+           // save & clear text input
+           var id = new Date().getTime();
+           window.localStorage[id] = message.value;
+           message.value = '';
+       }
+
+       target.postMessage(message.value, '*');
+    });
+</script>
+</body>
+</html>
